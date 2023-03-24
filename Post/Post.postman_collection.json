@@ -1,0 +1,1887 @@
+{
+	"info": {
+		"_postman_id": "5da7271f-d655-4bef-a909-731571ff8bec",
+		"name": "Post",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21376783"
+	},
+	"item": [
+		{
+			"name": "GetList",
+			"item": [
+				{
+					"name": "GetPostList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostList(POST)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostList(page=0)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post?page=0",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostList(page=1)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post?page=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostList(page=999)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post?page=999",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "999"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostList(page=1000)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post?page=1000",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostList(page=a)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post?page=a",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostList(page=)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post?page=",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostList(limit=)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post?limit=",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostList(limit=4)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post?limit=4",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostList(limit=5)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post?limit=5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostList(limit=50)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post?limit=50",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostList(limit=51)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post?limit=51",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "51"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostList(limit=a)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post?limit=a",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostList(created=0)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post?created=0",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "created",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostList(created=1)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post?created=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "created",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostList(created=)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post?created=",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "created",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostList(created=2)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post?created=2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "created",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPostList(created=a)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post?created=a",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "created",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get List By User",
+			"item": [
+				{
+					"name": "GetListbyUser(correct method and id)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/user/:id/post",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								":id",
+								"post"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60d0fe4f5311236168a109ca"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetListbyUser(correct method and without id)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/user/:id/post",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								":id",
+								"post"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetListbyUser(no correct id)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/user/:id/post",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								":id",
+								"post"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60d0fe4f5311236658a109ca"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetListbyUser(wrong method)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/user/:id/post",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								":id",
+								"post"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get List By Tag",
+			"item": [
+				{
+					"name": "GetListByTag(correct method and id)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/tag/:id/post",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tag",
+								":id",
+								"post"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60d0fe4f5311236168a109ca"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetListByTag(correct method and without id)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/tag/:id/post",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tag",
+								":id",
+								"post"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetListByTag(no correct id)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/tag/:id/post",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tag",
+								":id",
+								"post"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60d0fe4f5311236658a109ca"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetListByTag(wrong method)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/tag/:id/post",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tag",
+								":id",
+								"post"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create Post",
+			"item": [
+				{
+					"name": "CreatePost (correct body)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"ihuihui\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost (without body)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(text=)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(text=5)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"gfgty\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(text=6)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"gfgtya\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(text=50)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"rrrewwrtuyuiopgbfderytyuirrrewwrtuyuiopgbfderytyui\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(text=51)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"rrrewwrtuyuiopgbfdery tyuirrrewwrtuyuiopgbfderytyui\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(text=number)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": 5875847,\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(text=Array)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": [\"canine\", \"pet\", \"mammal\"],\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(text=Object)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": {\"title\": \"mrs\"},\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(text=Boolean)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": true,\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(image=)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": \"\",\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(image=number)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": 52282,\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(image=Array)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": [\"canine\", \"pet\", \"mammal\"],\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(image=Object)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": {\"title\": \"mrs\"},\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(image=Boolean)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": false,\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(likes=)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": \"\",\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(likes=0)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(likes=1)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 1,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(likes=string)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": \"j\",\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(likes=Array)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": [\"j\", \"g\"],\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(likes=Object)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": {\"title\": \"mrs\"},\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(likes=Boolean)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": true,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(tags=)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": \"\",\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(tags=Number)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": 2,\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(tags=String)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": \"g\",\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(tags=Object)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": {\"title\": \"mrs\"},\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(tags=Boolean)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": true,\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(owner - existing id)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(owner - no existing id)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"6404c8252e016fb8fa6f3af8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(owner=)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(owner=number)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(owner=Object)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": {\"title\": \"mrs\"}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatePost(owner=Boolean)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"Hiking with my dog in the woods. black labrador re\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/post/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delete Post",
+			"item": [
+				{
+					"name": "DeletePost",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60d21b4967d0d8992e610c90"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DeletePost(with id)",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/post/:id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"post",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "60d21b4967d0d8992e610c90"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"21-NFmlvS/h9FenQzImF/6pq82vvzc\""
+								},
+								{
+									"key": "Function-Execution-Id",
+									"value": "oh2g2oy0ivb1"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31556926"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "3a8e8baf1eb540a72bc9825f11d164bb;o=1"
+								},
+								{
+									"key": "X-Country-Code",
+									"value": "RU"
+								},
+								{
+									"key": "Accept-Ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 05 Mar 2023 14:11:29 GMT"
+								},
+								{
+									"key": "X-Served-By",
+									"value": "cache-hhn-etou8220035-HHN"
+								},
+								{
+									"key": "X-Cache",
+									"value": "MISS"
+								},
+								{
+									"key": "X-Cache-Hits",
+									"value": "0"
+								},
+								{
+									"key": "X-Timer",
+									"value": "S1678025489.278535,VS0,VE283"
+								},
+								{
+									"key": "Vary",
+									"value": "cookie,need-authorization, x-fh-requested-host, accept-encoding"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"60d21b4967d0d8992e610c90\"\n}"
+						},
+						{
+							"name": "DeletePost(not existing id)",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/post/:id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"post",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "60d21b4967d0d8992e610c90"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"1e-hQ3POqBPvsvSwNKcIR2tnEBMEfg\""
+								},
+								{
+									"key": "Function-Execution-Id",
+									"value": "6kjuxr40i7ds"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "2a83d152e47b3387cfe9fb71713402b2;o=1"
+								},
+								{
+									"key": "Accept-Ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 05 Mar 2023 14:12:58 GMT"
+								},
+								{
+									"key": "X-Served-By",
+									"value": "cache-hhn-etou8220035-HHN"
+								},
+								{
+									"key": "X-Cache",
+									"value": "MISS"
+								},
+								{
+									"key": "X-Cache-Hits",
+									"value": "0"
+								},
+								{
+									"key": "X-Timer",
+									"value": "S1678025579.839554,VS0,VE153"
+								},
+								{
+									"key": "Vary",
+									"value": "x-fh-requested-host, accept-encoding"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"RESOURCE_NOT_FOUND\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DeletePost(without id)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/post/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"post",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "app-id",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{app-id}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
