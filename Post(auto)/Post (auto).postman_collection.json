@@ -1,0 +1,870 @@
+{
+	"info": {
+		"_postman_id": "417cb51f-79af-4b63-a3ff-7e0c8a309622",
+		"name": "Post (auto)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21376783"
+	},
+	"item": [
+		{
+			"name": "Get List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json()\r",
+							"pm.test(\"Check body data is array\", function () {\r",
+							"pm.expect(jsonData.data).to.be.an(\"array\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].id is string\", function () {\r",
+							"pm.expect(jsonData.data[0].id).to.be.an(\"string\")\r",
+							"});\r",
+							"\r",
+							"let text = pm.response.json().data[0].text; // получение значения текста из ответа\r",
+							"let maxLength_text = 60; // максимальная допустимая длина текста\r",
+							"let minLength_text= 6; // минимальная допустимая длина текста\r",
+							"pm.test(\"The data[0].text name is a string of acceptable length\", function () {\r",
+							"    pm.expect(text.length).to.be.at.most(maxLength_text);\r",
+							"    pm.expect(text.length).to.be.at.least(minLength_text);\r",
+							"    pm.expect(text).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].image is string\", function () {\r",
+							"pm.expect(jsonData.data[0].image).to.be.an(\"string\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"The value of data[0].likes is a number\", function() {\r",
+							"    pm.expect(typeof jsonData.data[0].likes).to.equal(\"number\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].tags is array\", function () {\r",
+							"pm.expect(jsonData.data[0].tags).to.be.an(\"array\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].publishDate is string\", function () {\r",
+							"pm.expect(jsonData.data[0].publishDate).to.be.an(\"string\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].updatedDate is undefined\", function () {\r",
+							"pm.expect(jsonData.data[0].updatedDate).to.be.an(\"undefined\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].owner is object\", function () {\r",
+							"pm.expect(jsonData.data[0].owner).to.be.an(\"object\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].owner.id is string\", function () {\r",
+							"pm.expect(jsonData.data[0].owner.id).to.be.an(\"string\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].owner.title\", function () {\r",
+							"    pm.expect(jsonData.data[0].owner.title).to.be.a('string');\r",
+							"    var allowedValues = [\"mr\", \"ms\", \"mrs\", \"miss\", \"dr\", \"\"];\r",
+							"    pm.expect(allowedValues).to.include(jsonData.data[0].owner.title);\r",
+							"});\r",
+							"\r",
+							"let fname = pm.response.json().data[0].owner.firstName; // получение значения имени из ответа\r",
+							"let maxLength_fname = 50; // максимальная допустимая длина имени\r",
+							"let minLength_fname= 2; // минимальная допустимая длина имени\r",
+							"pm.test(\"The data[0].owner.firstname is a string of acceptable length\", function () {\r",
+							"    pm.expect(fname.length).to.be.at.most(maxLength_fname);\r",
+							"    pm.expect(fname.length).to.be.at.least(minLength_fname);\r",
+							"    pm.expect(fname).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"let lname = pm.response.json().data[0].owner.lastName; // получение значения фамилии из ответа\r",
+							"let maxLength_lname = 50; // максимальная допустимая длина фамилии\r",
+							"let minLength_lname= 2; // минимальная допустимая длина фамилии\r",
+							"pm.test(\"The data[0].owner.lastname is a string of acceptable length\", function () {\r",
+							"    pm.expect(lname.length).to.be.at.most(maxLength_lname);\r",
+							"    pm.expect(lname.length).to.be.at.least(minLength_lname);\r",
+							"    pm.expect(lname).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].owner.picture is string\", function () {\r",
+							"    pm.expect(jsonData.data[0].owner.picture).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"var pageValue = pm.response.json().page; // получение значения фамилии из ответа\r",
+							"pm.test(\"The value page is in the range [0-999]\", function() {\r",
+							"    pm.expect(pageValue).to.be.within(0, 999);\r",
+							"});\r",
+							"\r",
+							"var limitValue = pm.response.json().limit; // получение значения фамилии из ответа\r",
+							"pm.test(\"The value limit is in the range [5-50]\", function() {\r",
+							"    pm.expect(limitValue).to.be.within(5, 50);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body total is number\", function () {\r",
+							"    pm.expect(typeof jsonData.total).to.equal(\"number\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body page is number\", function () {\r",
+							"    pm.expect(typeof jsonData.page).to.equal(\"number\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body limit is number\", function () {\r",
+							"    pm.expect(typeof jsonData.limit).to.equal(\"number\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/post?page=1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"post"
+					],
+					"query": [
+						{
+							"key": "total ",
+							"value": "11",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.collectionVariables.set(\"PostID\", jsonData.id);\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});\r",
+							"\r",
+							"var jsonData3 = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Check id post\", function () {\r",
+							"    pm.expect(jsonData3.id).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check image\", function () {\r",
+							"    pm.expect(jsonData3.image).to.eql(\"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check likes\", function () {\r",
+							"    pm.expect(jsonData3.likes).to.eql(0);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check link\", function () {\r",
+							"    pm.expect(jsonData3.link).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check tags\", function () {\r",
+							"    pm.expect(jsonData3.tags).to.be.an('array').that.includes(\"canine\", \"pet\", \"mammal\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check text\", function () {\r",
+							"    pm.expect(jsonData3.text).to.eql(\"Hello world\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check publishDate\", function () {\r",
+							"    pm.expect(jsonData3.publishDate).to.be.a('string');;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check updatedDate\", function () {\r",
+							"    pm.expect(jsonData3.updatedDate).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check id user\", function () {\r",
+							"    pm.expect(jsonData3.owner.id).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check title\", function () {\r",
+							"    pm.expect(jsonData3.owner.title).to.eql(\"mrs\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check firstName\", function () {\r",
+							"    pm.expect(jsonData3.owner.firstName).to.eql(\"Sibylle\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check lastName\", function () {\r",
+							"    pm.expect(jsonData3.owner.lastName).to.eql(\"Leibold\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check picture\", function () {\r",
+							"    pm.expect(jsonData3.owner.picture).to.eql(\"https://randomuser.me/api/portraits/med/women/89.jpg\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"text\": \"Hello world\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 0,\r\n\"tags\": [\"canine\", \"pet\", \"mammal\"],\r\n\"owner\": \"60d0fe4f5311236168a109d5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/post/create",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"post",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List By User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json()\r",
+							"pm.test(\"Check body data is array\", function () {\r",
+							"pm.expect(jsonData.data).to.be.an(\"array\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].id is string\", function () {\r",
+							"pm.expect(jsonData.data[0].id).to.be.an(\"string\")\r",
+							"});\r",
+							"\r",
+							"let text = pm.response.json().data[0].text; // получение значения текста из ответа\r",
+							"let maxLength_text = 60; // максимальная допустимая длина текста\r",
+							"let minLength_text= 6; // минимальная допустимая длина текста\r",
+							"pm.test(\"The data[0].text name is a string of acceptable length\", function () {\r",
+							"    pm.expect(text.length).to.be.at.most(maxLength_text);\r",
+							"    pm.expect(text.length).to.be.at.least(minLength_text);\r",
+							"    pm.expect(text).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].image is string\", function () {\r",
+							"pm.expect(jsonData.data[0].image).to.be.an(\"string\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"The value of data[0].likes is a number\", function() {\r",
+							"    pm.expect(typeof jsonData.data[0].likes).to.equal(\"number\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].tags is array\", function () {\r",
+							"pm.expect(jsonData.data[0].tags).to.be.an(\"array\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].publishDate is string\", function () {\r",
+							"pm.expect(jsonData.data[0].publishDate).to.be.an(\"string\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].updatedDate is undefined\", function () {\r",
+							"pm.expect(jsonData.data[0].updatedDate).to.be.an(\"undefined\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].owner is object\", function () {\r",
+							"pm.expect(jsonData.data[0].owner).to.be.an(\"object\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].owner.id is string\", function () {\r",
+							"pm.expect(jsonData.data[0].owner.id).to.be.an(\"string\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].owner.title\", function () {\r",
+							"    pm.expect(jsonData.data[0].owner.title).to.be.a('string');\r",
+							"    var allowedValues = [\"mr\", \"ms\", \"mrs\", \"miss\", \"dr\", \"\"];\r",
+							"    pm.expect(allowedValues).to.include(jsonData.data[0].owner.title);\r",
+							"});\r",
+							"\r",
+							"let fname = pm.response.json().data[0].owner.firstName; // получение значения имени из ответа\r",
+							"let maxLength_fname = 50; // максимальная допустимая длина имени\r",
+							"let minLength_fname= 2; // минимальная допустимая длина имени\r",
+							"pm.test(\"The data[0].owner.firstname is a string of acceptable length\", function () {\r",
+							"    pm.expect(fname.length).to.be.at.most(maxLength_fname);\r",
+							"    pm.expect(fname.length).to.be.at.least(minLength_fname);\r",
+							"    pm.expect(fname).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"let lname = pm.response.json().data[0].owner.lastName; // получение значения фамилии из ответа\r",
+							"let maxLength_lname = 50; // максимальная допустимая длина фамилии\r",
+							"let minLength_lname= 2; // минимальная допустимая длина фамилии\r",
+							"pm.test(\"The data[0].owner.lastname is a string of acceptable length\", function () {\r",
+							"    pm.expect(lname.length).to.be.at.most(maxLength_lname);\r",
+							"    pm.expect(lname.length).to.be.at.least(minLength_lname);\r",
+							"    pm.expect(lname).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].owner.picture is string\", function () {\r",
+							"    pm.expect(jsonData.data[0].owner.picture).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"var pageValue = pm.response.json().page; // получение значения фамилии из ответа\r",
+							"pm.test(\"The value page is in the range [0-999]\", function() {\r",
+							"    pm.expect(pageValue).to.be.within(0, 999);\r",
+							"});\r",
+							"\r",
+							"var limitValue = pm.response.json().limit; // получение значения фамилии из ответа\r",
+							"pm.test(\"The value limit is in the range [5-50]\", function() {\r",
+							"    pm.expect(limitValue).to.be.within(5, 50);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body total is number\", function () {\r",
+							"    pm.expect(typeof jsonData.total).to.equal(\"number\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body page is number\", function () {\r",
+							"    pm.expect(typeof jsonData.page).to.equal(\"number\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body limit is number\", function () {\r",
+							"    pm.expect(typeof jsonData.limit).to.equal(\"number\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/user/:id/post",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						":id",
+						"post"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "60d0fe4f5311236168a109ca"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List By Tag",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json()\r",
+							"pm.test(\"Check body data is array\", function () {\r",
+							"pm.expect(jsonData.data).to.be.an(\"array\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].id is string\", function () {\r",
+							"pm.expect(jsonData.data[0].id).to.be.an(\"string\")\r",
+							"});\r",
+							"\r",
+							"let text = pm.response.json().data[0].text; // получение значения текста из ответа\r",
+							"let maxLength_text = 60; // максимальная допустимая длина текста\r",
+							"let minLength_text= 6; // минимальная допустимая длина текста\r",
+							"pm.test(\"The data[0].text name is a string of acceptable length\", function () {\r",
+							"    pm.expect(text.length).to.be.at.most(maxLength_text);\r",
+							"    pm.expect(text.length).to.be.at.least(minLength_text);\r",
+							"    pm.expect(text).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].image is string\", function () {\r",
+							"pm.expect(jsonData.data[0].image).to.be.an(\"string\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"The value of data[0].likes is a number\", function() {\r",
+							"    pm.expect(typeof jsonData.data[0].likes).to.equal(\"number\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].tags is array\", function () {\r",
+							"pm.expect(jsonData.data[0].tags).to.be.an(\"array\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].publishDate is string\", function () {\r",
+							"pm.expect(jsonData.data[0].publishDate).to.be.an(\"string\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].updatedDate is undefined\", function () {\r",
+							"pm.expect(jsonData.data[0].updatedDate).to.be.an(\"undefined\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].owner is object\", function () {\r",
+							"pm.expect(jsonData.data[0].owner).to.be.an(\"object\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].owner.id is string\", function () {\r",
+							"pm.expect(jsonData.data[0].owner.id).to.be.an(\"string\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].owner.title\", function () {\r",
+							"    pm.expect(jsonData.data[0].owner.title).to.be.a('string');\r",
+							"    var allowedValues = [\"mr\", \"ms\", \"mrs\", \"miss\", \"dr\", \"\"];\r",
+							"    pm.expect(allowedValues).to.include(jsonData.data[0].owner.title);\r",
+							"});\r",
+							"\r",
+							"let fname = pm.response.json().data[0].owner.firstName; // получение значения имени из ответа\r",
+							"let maxLength_fname = 50; // максимальная допустимая длина имени\r",
+							"let minLength_fname= 2; // минимальная допустимая длина имени\r",
+							"pm.test(\"The data[0].owner.firstname is a string of acceptable length\", function () {\r",
+							"    pm.expect(fname.length).to.be.at.most(maxLength_fname);\r",
+							"    pm.expect(fname.length).to.be.at.least(minLength_fname);\r",
+							"    pm.expect(fname).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"let lname = pm.response.json().data[0].owner.lastName; // получение значения фамилии из ответа\r",
+							"let maxLength_lname = 50; // максимальная допустимая длина фамилии\r",
+							"let minLength_lname= 2; // минимальная допустимая длина фамилии\r",
+							"pm.test(\"The data[0].owner.lastname is a string of acceptable length\", function () {\r",
+							"    pm.expect(lname.length).to.be.at.most(maxLength_lname);\r",
+							"    pm.expect(lname.length).to.be.at.least(minLength_lname);\r",
+							"    pm.expect(lname).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body data[0].owner.picture is string\", function () {\r",
+							"    pm.expect(jsonData.data[0].owner.picture).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"var pageValue = pm.response.json().page; // получение значения фамилии из ответа\r",
+							"pm.test(\"The value page is in the range [0-999]\", function() {\r",
+							"    pm.expect(pageValue).to.be.within(0, 999);\r",
+							"});\r",
+							"\r",
+							"var limitValue = pm.response.json().limit; // получение значения фамилии из ответа\r",
+							"pm.test(\"The value limit is in the range [5-50]\", function() {\r",
+							"    pm.expect(limitValue).to.be.within(5, 50);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body total is number\", function () {\r",
+							"    pm.expect(typeof jsonData.total).to.equal(\"number\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body page is number\", function () {\r",
+							"    pm.expect(typeof jsonData.page).to.equal(\"number\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body limit is number\", function () {\r",
+							"    pm.expect(typeof jsonData.limit).to.equal(\"number\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/tag/:id/post",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"tag",
+						":id",
+						"post"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "dog"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Post by id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json()\r",
+							"\r",
+							"pm.test(\"Check body id is string\", function () {\r",
+							"pm.expect(jsonData.id).to.be.an(\"string\")\r",
+							"});\r",
+							"\r",
+							"let text = pm.response.json().text; // получение значения текста из ответа\r",
+							"let maxLength_text = 1000; // максимальная допустимая длина текста\r",
+							"let minLength_text= 6; // минимальная допустимая длина текста\r",
+							"pm.test(\"The data[0].text name is a string of acceptable length\", function () {\r",
+							"    pm.expect(text.length).to.be.at.most(maxLength_text);\r",
+							"    pm.expect(text.length).to.be.at.least(minLength_text);\r",
+							"    pm.expect(text).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body image is string\", function () {\r",
+							"pm.expect(jsonData.image).to.be.an(\"string\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"The value of likes is a number\", function() {\r",
+							"    pm.expect(typeof jsonData.likes).to.equal(\"number\");\r",
+							"});\r",
+							"\r",
+							"let link = pm.response.json().link; // получение значения ссылки из ответа\r",
+							"let maxLength_link = 200; // максимальная допустимая длина ссылки\r",
+							"let minLength_link= 6; // минимальная допустимая длина ссылки\r",
+							"pm.test(\"The link name is a string of acceptable length\", function () {\r",
+							"    pm.expect(link.length).to.be.at.most(maxLength_link);\r",
+							"    pm.expect(link.length).to.be.at.least(minLength_link);\r",
+							"    pm.expect(link).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body tags is array\", function () {\r",
+							"pm.expect(jsonData.tags).to.be.an(\"array\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body publishDate is string\", function () {\r",
+							"pm.expect(jsonData.publishDate).to.be.an(\"string\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body updatedDate is undefined\", function () {\r",
+							"pm.expect(jsonData.updatedDate).to.be.an(\"undefined\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body owner is object\", function () {\r",
+							"pm.expect(jsonData.owner).to.be.an(\"object\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body owner.id is string\", function () {\r",
+							"pm.expect(jsonData.owner.id).to.be.an(\"string\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body owner.title\", function () {\r",
+							"    pm.expect(jsonData.owner.title).to.be.a('string');\r",
+							"    var allowedValues = [\"mr\", \"ms\", \"mrs\", \"miss\", \"dr\", \"\"];\r",
+							"    pm.expect(allowedValues).to.include(jsonData.owner.title);\r",
+							"});\r",
+							"\r",
+							"let fname = pm.response.json().owner.firstName; // получение значения имени из ответа\r",
+							"let maxLength_fname = 50; // максимальная допустимая длина имени\r",
+							"let minLength_fname= 2; // минимальная допустимая длина имени\r",
+							"pm.test(\"The owner.firstname is a string of acceptable length\", function () {\r",
+							"    pm.expect(fname.length).to.be.at.most(maxLength_fname);\r",
+							"    pm.expect(fname.length).to.be.at.least(minLength_fname);\r",
+							"    pm.expect(fname).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"let lname = pm.response.json().owner.lastName; // получение значения фамилии из ответа\r",
+							"let maxLength_lname = 50; // максимальная допустимая длина фамилии\r",
+							"let minLength_lname= 2; // минимальная допустимая длина фамилии\r",
+							"pm.test(\"The owner.lastname is a string of acceptable length\", function () {\r",
+							"    pm.expect(lname.length).to.be.at.most(maxLength_lname);\r",
+							"    pm.expect(lname.length).to.be.at.least(minLength_lname);\r",
+							"    pm.expect(lname).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check body owner.picture is string\", function () {\r",
+							"    pm.expect(jsonData.owner.picture).to.be.a('string');\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/post/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"post",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{PostID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});\r",
+							"\r",
+							"var jsonData3 = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Check id post\", function () {\r",
+							"    pm.expect(jsonData3.id).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check image\", function () {\r",
+							"    pm.expect(jsonData3.image).to.eql(\"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check likes\", function () {\r",
+							"    pm.expect(jsonData3.likes).to.eql(1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check link\", function () {\r",
+							"    pm.expect(jsonData3.link).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check tags\", function () {\r",
+							"    pm.expect(jsonData3.tags).to.be.an('array').that.includes(\"pet\", \"mammal\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check text\", function () {\r",
+							"    pm.expect(jsonData3.text).to.eql(\"Hello\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check publishDate\", function () {\r",
+							"    pm.expect(jsonData3.publishDate).to.be.a('string');;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check updatedDate\", function () {\r",
+							"    pm.expect(jsonData3.updatedDate).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check id user\", function () {\r",
+							"    pm.expect(jsonData3.owner.id).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check title\", function () {\r",
+							"    pm.expect(jsonData3.owner.title).to.eql(\"mrs\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check firstName\", function () {\r",
+							"    pm.expect(jsonData3.owner.firstName).to.eql(\"Sibylle\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check lastName\", function () {\r",
+							"    pm.expect(jsonData3.owner.lastName).to.eql(\"Leibold\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check picture\", function () {\r",
+							"    pm.expect(jsonData3.owner.picture).to.eql(\"https://randomuser.me/api/portraits/med/women/89.jpg\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"text\": \"Hello\",\r\n\"image\": \"https://img.dummyapi.io/photo-1581804928342-4e3405e39c91.jpg\",\r\n\"likes\": 1,\r\n\"tags\": [\"pet\", \"mammal\"],\r\n\"owner\": \"{{UserID}}\"\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/post/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"post",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{PostID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 700ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Delete Post\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.id).to.eql(pm.collectionVariables.get(\"PostID\"));\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/post/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"post",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{PostID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "app-id",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{app-id}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "PostID",
+			"value": ""
+		}
+	]
+}
